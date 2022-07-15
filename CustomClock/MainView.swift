@@ -7,64 +7,50 @@
 
 import SwiftUI
 
-struct CityImage: View {
-    let imageName: String
-    var timeString: String?
-    
-    var body: some View {
-        ZStack {
-            Image(imageName)
-                .resizable()
-                .edgesIgnoringSafeArea(.top)
-            Text(timeString ?? "")
-                .font(.system(size: 18, weight: .heavy, design: .monospaced))
-                .foregroundColor(Color.theme.whitePink)
-                .padding()
-                .background {
-                    RoundedRectangle(cornerRadius: 20)
-                        .foregroundColor(.black)
-                        .opacity(0.5)
-                        .frame(width: 330, height: 60, alignment: .center)
-                        .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.theme.whitePink, lineWidth: 5))
-                }
-                .frame(width: 330, height: 60, alignment: .center)
-        }
-    }
-}
-
 struct MainView: View {
     @StateObject var vm = ViewModel()
     @State var showLoadingView = true
+    @State var tabSelection = 4
     var body: some View {
         
         ZStack {
-            TabView {
-                CityImage(imageName: "Disney", timeString: vm.nyTimeString)
+            // 탭뷰
+            TabView(selection: $tabSelection) {
+                CityImage(imageName: "Disney", timeString: vm.nyTimeString, cityName: "Orlando")
                     .tabItem {
                         Image(systemName: "globe.americas.fill")
                         Text("Orlando")
                             .font(.headline)
                     }
-                CityImage(imageName: "HollywoodSign", timeString: vm.laTimeString)
+                    .tag(1)
+                    
+                CityImage(imageName: "HollywoodSign", timeString: vm.laTimeString, cityName: "Los Angeles")
                     .tabItem {
                         Image(systemName: "globe.americas")
                         Text("LA")
                             .font(.headline)
                     }
-                CityImage(imageName: "TheStatueOfLiberty", timeString: vm.nyTimeString)
+                    .tag(2)
+
+                CityImage(imageName: "TheStatueOfLiberty", timeString: vm.nyTimeString, cityName: "New York")
                     .tabItem {
                         Image(systemName: "globe.americas.fill")
                         Text("NewYork")
                             .font(.headline)
                     }
-                CityImage(imageName: "Seoul", timeString: vm.krTimeString)
+                    .tag(3)
+
+                CityImage(imageName: "Seoul", timeString: vm.krTimeString, cityName: "Seoul")
                     .tabItem {
                         Image(systemName: "globe.asia.australia.fill")
                         Text("Seoul")
                             .font(.headline)
                     }
-            }
-            
+                    .tag(4)
+
+            }// tabView
+
+            // 로딩뷰
             ZStack {
                 if showLoadingView {
                     LoadingView(showLoadingView: $showLoadingView)
