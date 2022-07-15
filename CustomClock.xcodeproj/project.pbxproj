@@ -8,23 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		7FED6AC2287FF75C001BDE43 /* CustomClockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FED6AC1287FF75C001BDE43 /* CustomClockApp.swift */; };
-		7FED6AC4287FF75C001BDE43 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FED6AC3287FF75C001BDE43 /* ContentView.swift */; };
 		7FED6AC6287FF75E001BDE43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FED6AC5287FF75E001BDE43 /* Assets.xcassets */; };
 		7FED6AC9287FF75E001BDE43 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FED6AC8287FF75E001BDE43 /* Preview Assets.xcassets */; };
 		7FED6AD0287FF780001BDE43 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FED6ACF287FF780001BDE43 /* MainView.swift */; };
 		7FED6AD2287FFCFE001BDE43 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FED6AD1287FFCFE001BDE43 /* ViewModel.swift */; };
 		7FED6AD4287FFDBE001BDE43 /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FED6AD3287FFDBE001BDE43 /* DateService.swift */; };
+		7FED6AD628814FC9001BDE43 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FED6AD528814FC9001BDE43 /* Color.swift */; };
+		7FED6AD828815190001BDE43 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FED6AD728815190001BDE43 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7FED6ABE287FF75C001BDE43 /* CustomClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FED6AC1287FF75C001BDE43 /* CustomClockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomClockApp.swift; sourceTree = "<group>"; };
-		7FED6AC3287FF75C001BDE43 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7FED6AC5287FF75E001BDE43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FED6AC8287FF75E001BDE43 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7FED6ACF287FF780001BDE43 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7FED6AD1287FFCFE001BDE43 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		7FED6AD3287FFDBE001BDE43 /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
+		7FED6AD528814FC9001BDE43 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		7FED6AD728815190001BDE43 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +60,11 @@
 			isa = PBXGroup;
 			children = (
 				7FED6AC1287FF75C001BDE43 /* CustomClockApp.swift */,
-				7FED6AC3287FF75C001BDE43 /* ContentView.swift */,
 				7FED6ACF287FF780001BDE43 /* MainView.swift */,
+				7FED6AD728815190001BDE43 /* LoadingView.swift */,
 				7FED6AD1287FFCFE001BDE43 /* ViewModel.swift */,
 				7FED6AD3287FFDBE001BDE43 /* DateService.swift */,
+				7FED6AD528814FC9001BDE43 /* Color.swift */,
 				7FED6AC5287FF75E001BDE43 /* Assets.xcassets */,
 				7FED6AC7287FF75E001BDE43 /* Preview Content */,
 			);
@@ -146,11 +149,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FED6AC4287FF75C001BDE43 /* ContentView.swift in Sources */,
 				7FED6AD0287FF780001BDE43 /* MainView.swift in Sources */,
 				7FED6AD2287FFCFE001BDE43 /* ViewModel.swift in Sources */,
 				7FED6AC2287FF75C001BDE43 /* CustomClockApp.swift in Sources */,
+				7FED6AD628814FC9001BDE43 /* Color.swift in Sources */,
 				7FED6AD4287FFDBE001BDE43 /* DateService.swift in Sources */,
+				7FED6AD828815190001BDE43 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

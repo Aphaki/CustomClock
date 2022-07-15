@@ -14,7 +14,6 @@ class ViewModel: ObservableObject {
     @Published var laTimeString: String?
     
     var subscription = Set<AnyCancellable>()
-    let timer = Timer.publish(every: 1.0, on: .main, in: .default).autoconnect()
     let dateService = DateService()
     
     init() {

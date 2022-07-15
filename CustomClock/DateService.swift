@@ -43,16 +43,9 @@ class DateService {
     
     
     init() {
-//        subscribeTimer()
         dateToString()
     }
-//    func subscribeTimer() {
-//        subscription = timer.sink(receiveCompletion: { completion in
-//            print("타이머 구독 실패: \(completion)")
-//        }, receiveValue: {[weak self] output in
-//            self?.timeDate = output
-//        })
-//    }
+
     
     func dateToString() {
         subscription = timer.sink(receiveValue: { [weak self] date in
@@ -61,8 +54,5 @@ class DateService {
             self.laTimeString = self.laDateFormatter.string(from: date)
             self.krTimeString = self.krDateFormatter.string(from: date)
         })
-//        nyTimeString = nyDateFormatter.string(from: timeDate)
-//        laTimeString = laDateFormatter.string(from: timeDate)
-
     }
 }
