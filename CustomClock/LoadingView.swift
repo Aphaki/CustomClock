@@ -15,6 +15,7 @@ struct LoadingView: View {
     
     
     let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
+    
     var body: some View {
         ZStack {
             Color.theme.background
@@ -24,7 +25,7 @@ struct LoadingView: View {
                     Text(loadingText[index])
                         .font(.headline)
                         .foregroundColor(Color.theme.accent)
-                        .offset(y: index == count ? -4 : 0)
+                        .offset(y: index == count ? -15 : 0)
                 }
             }
             .onReceive(timer) { _ in

@@ -16,7 +16,7 @@ struct MainView: View {
         ZStack {
             // 탭뷰
             TabView(selection: $tabSelection) {
-                CityImage(imageName: "Disney", timeString: vm.nyTimeString, cityName: "Orlando")
+                CityTabChildView(imageName: "Disney", timeString: vm.nyTimeString, cityName: "Orlando")
                     .tabItem {
                         Image(systemName: "globe.americas.fill")
                         Text("Orlando")
@@ -24,7 +24,7 @@ struct MainView: View {
                     }
                     .tag(1)
                     
-                CityImage(imageName: "HollywoodSign", timeString: vm.laTimeString, cityName: "Los Angeles")
+                CityTabChildView(imageName: "HollywoodSign", timeString: vm.laTimeString, cityName: "Los Angeles")
                     .tabItem {
                         Image(systemName: "globe.americas")
                         Text("LA")
@@ -32,7 +32,7 @@ struct MainView: View {
                     }
                     .tag(2)
 
-                CityImage(imageName: "TheStatueOfLiberty", timeString: vm.nyTimeString, cityName: "New York")
+                CityTabChildView(imageName: "TheStatueOfLiberty", timeString: vm.nyTimeString, cityName: "New York")
                     .tabItem {
                         Image(systemName: "globe.americas.fill")
                         Text("NewYork")
@@ -40,7 +40,7 @@ struct MainView: View {
                     }
                     .tag(3)
 
-                CityImage(imageName: "Seoul", timeString: vm.krTimeString, cityName: "Seoul")
+                CityTabChildView(imageName: "Seoul", timeString: vm.krTimeString, cityName: "Seoul")
                     .tabItem {
                         Image(systemName: "globe.asia.australia.fill")
                         Text("Seoul")
@@ -49,6 +49,11 @@ struct MainView: View {
                     .tag(4)
 
             }// tabView
+            .onChange(of: tabSelection) { newValue in
+                print("tabnSelection: \(newValue)")
+            }
+//            .tabViewStyle(.page)
+//            .edgesIgnoringSafeArea(.top)
 
             // 로딩뷰
             ZStack {

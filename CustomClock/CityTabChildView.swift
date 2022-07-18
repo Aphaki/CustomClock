@@ -1,5 +1,5 @@
 //
-//  CityImage.swift
+//  CityTabChildView.swift
 //  CustomClock
 //
 //  Created by Sy Lee on 2022/07/15.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CityImage: View {
+struct CityTabChildView: View {
     let imageName: String
     var timeString: String?
     let cityName: String
@@ -38,12 +38,11 @@ struct CityImage: View {
                     .frame(width: 330, height: 60, alignment: .center)
             }
         }
-        .transition(.slide)
     }
 }
 
-struct CityImage_Previews: PreviewProvider {
+struct CityTabChildView_Previews: PreviewProvider {
     static var previews: some View {
-        CityImage(imageName: "Disney", cityName: "Orlando")
+        CityTabChildView(imageName: "Disney", cityName: "Orlando")
     }
 }
